@@ -10,8 +10,12 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.14",
+    "@heroicons/vue": "^2.0.18",
+    "lucide-vue-next": "^0.259.0",
     "pinia": "^2.0.36",
     "vue": "^3.3.2",
+    "vue-carousel": "^0.18.0",
     "vue-router": "^4.2.0"
   },
   "devDependencies": {
