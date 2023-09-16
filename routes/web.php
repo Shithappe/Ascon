@@ -4,6 +4,8 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+use App\Http\Controllers\ProductController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,4 +38,6 @@ Route::middleware([
     Route::get('/main', function () {
         return Inertia::render('Main');
     })->name('main');
+
+    Route::get('/products', [ProductController::class, 'index']);
 });
