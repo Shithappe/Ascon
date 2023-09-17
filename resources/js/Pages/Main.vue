@@ -1,5 +1,6 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
+import ProductCard from '@/Components/ProductCard.vue';
 
 defineProps({
     products: Array
@@ -7,22 +8,20 @@ defineProps({
 </script>
 
 <template>
-    <AppLayout title="Dashboard">
+    <AppLayout title="Головна">
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Dashboard
+                Головна
             </h2>
         </template>
 
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                    <b>не Welcome</b>
 
-                    <div v-for="product in products" :key="product.id">
-                        <div>{{product.name}}</div>
+                <div class="w-4/5 grid grid-cols-3 gap-y-8">
+                    <div class="" v-for="product in products" :key="product.id">
+                        <ProductCard :product="product" />
                     </div>
-
                 </div>
             </div>
         </div>

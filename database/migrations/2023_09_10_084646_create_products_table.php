@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
+            $table->string('image')->default('https://www.touchtaiwan.com/images/default.jpg');
             $table->decimal('price', 10, 2)->unsigned();
             $table->unsignedInteger('count');
             $table->string('color');
