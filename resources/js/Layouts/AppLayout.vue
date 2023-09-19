@@ -13,6 +13,10 @@ import Lucide from '@/Components/Lucide.vue';
 
 defineProps({
     title: String,
+    showUserInfo: {
+        type: Boolean,
+        default: false,
+    }
 });
 
 const showingNavigationDropdown = ref(false);
@@ -331,7 +335,7 @@ const form = useForm({
                         <slot name="header" />
                         <button class="flex items-center px-2 py-1 border shadow rounded-lg">
                             <Lucide class="w-4 h-4 mr-1" icon="ShoppingCart" />
-                            <div>Кошик</div>
+                            <Link href="/cart">Кошик</Link>
                         </button>
                     </div>
                 </header>
@@ -341,7 +345,7 @@ const form = useForm({
                     <slot />
                 </main>
 
-                <div class="w-80 absolute top-44 right-8 p-2 bg-white">
+                <div v-if="showUserInfo" class="w-80 absolute top-44 right-8 p-2 bg-white">
                     <div class="font-medium text-base text-gray-900">
                         {{ $page.props.auth.user.name }}
                     </div>

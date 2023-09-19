@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-    <AppLayout title="Головна">
+    <AppLayout title="Головна" showUserInfo="true">
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 Головна

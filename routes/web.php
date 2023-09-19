@@ -40,4 +40,11 @@ Route::middleware([
     })->name('main');
 
     Route::get('/products', [ProductController::class, 'index']);
+
+    Route::get('/cart', function () {
+        return Inertia::render('Cart');
+    })->name('cart');
 });
+
+
+
